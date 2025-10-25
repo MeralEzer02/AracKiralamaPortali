@@ -13,6 +13,23 @@ builder.Services.AddDbContext<AracKiralamaDbContext>(options =>
 // 2. Repository Servisini Sisteme Kaydetme:
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
+
+// COOKIE AUTHENTICATION HÝZMETÝ TANIMLAMA
+// 1. Kimlik Doðrulama hizmetini ekle (Authentication)
+builder.Services.AddAuthentication("AdminAuth") 
+    .AddCookie("AdminAuth", options => 
+    {
+        // Kullanýcý yetkisi yoksa, otomatik olarak bu sayfaya yönlendir.
+        options.LoginPath = "/Admin/Login";
+        // Yetkisiz eriþim denemesi olduðunda gösterilecek sayfa (opsiyonel)
+        options.AccessDeniedPath = "/Admin/AccessDenied";
+        // Cookie'nin ne kadar süre geçerli olacaðýný ayarla (30 dakika)
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        // Kullanýcý "Beni Hatýrla" seçeneðini iþaretlerse, Cookie'nin süresini uzat.
+        options.SlidingExpiration = true;
+    });
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -27,6 +44,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
