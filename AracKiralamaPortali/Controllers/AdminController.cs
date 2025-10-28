@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks; // async/await için gerekli
 
 namespace AracKiralamaPortali.Controllers
-{
+{  
     // Controller Seviyesi Yetkilendirme Kilidi: 
     // Bu Controller'daki tüm Action'lara erişim için AdminAuth şemasıyla oturum açmış kullanıcı gereklidir.
     [Route("Admin")]
