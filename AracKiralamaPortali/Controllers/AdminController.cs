@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using AracKiralamaPortali.ViewModels; // Bu namespace'i değiştireceğiz
+using CarRentalPortal.ViewModels;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
-using AracKiralamaPortali.Repositories;
-using AracKiralamaPortali.Models;
+using CarRentalPortal.Repositories;
+using CarRentalPortal.Models;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -42,12 +42,12 @@ namespace CarRentalPortal.Controllers
             var vehicleViewModels = vehicleEntities.Select(vehicle => new VehicleListViewModel 
             {
                 Id = vehicle.Id,
-                Marka = vehicle.Marka,
+                Make= vehicle.Make,
                 Model = vehicle.Model,
-                ModelYili = vehicle.ModelYili,
-                Plaka = vehicle.Plaka,
-                GunlukKiraUcreti = vehicle.GunlukKiraUcreti,
-                KiradaMi = vehicle.KiradaMi,
+                ModelYear = vehicle.ModelYear,
+                LicensePlate = vehicle.LicensePlate,
+                DailyRate = vehicle.DailyRate,
+                IsRented = vehicle.IsRented,
             }).ToList();
 
             // 3. View'a Gönderme

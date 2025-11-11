@@ -1,15 +1,15 @@
 ﻿@{
     Layout = "~/Views/Admin/_AdminLayout.cshtml";
 
-    ViewData["Title"] = "Dashboard - Araç Kiralama Yönetimi";
+    ViewData["Title"] = "Dashboard - Car Rental Management";
 }
 
 <div class="container-fluid">
 
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Yönetici Paneli - Araç Durum Özeti</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-            <i class="fas fa-car fa-sm text-white-50"></i> Araç Listesine Git
+        <h1 class="h3 mb-0 text-gray-800">Admin Dashboard - Vehicle Status Overview</h1>
+        <a asp-action="Vehicles" asp-controller="Admin" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-car fa-sm text-white-50"></i> Go to Vehicle List
         </a>
     </div>
 
@@ -21,7 +21,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Toplam Araç Sayısı
+                                Total Vehicles
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">50</div>
                         </div>
@@ -39,7 +39,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                Kirada Olanlar
+                                Rented Vehicles
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
                         </div>
@@ -57,7 +57,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Müsait Araçlar
+                                Available Vehicles
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">38</div>
                         </div>

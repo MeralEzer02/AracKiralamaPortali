@@ -1,5 +1,4 @@
-﻿using AracKiralamaPortali.Models;
-using CarRentalPortal.Models;
+﻿using CarRentalPortal.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalPortal.Data

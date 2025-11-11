@@ -1,4 +1,4 @@
-namespace AracKiralamaPortali.Models
+namespace CarRentalPortal.Models
 {
     public class ErrorViewModel
     {

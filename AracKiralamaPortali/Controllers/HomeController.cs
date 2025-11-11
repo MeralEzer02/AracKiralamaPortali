@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using AracKiralamaPortali.Models;
+using CarRentalPortal.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AracKiralamaPortali.Controllers
+namespace CarRentalPortal.Controllers
 {
     public class HomeController : Controller
     {

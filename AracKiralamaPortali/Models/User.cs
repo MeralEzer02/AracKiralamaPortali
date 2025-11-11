@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AracKiralamaPortali.Models
+namespace CarRentalPortal.Models
 {
     public class User
     {
@@ -8,14 +8,14 @@ namespace AracKiralamaPortali.Models
 
         [Required]
         [MaxLength(100)]
-        public string Email { get; set; } // Kullanıcı adı olarak kullanacağız.
+        public string Email { get; set; }
 
         [Required]
-        public string SifreHash { get; set; }
+        public string PasswordHash { get; set; } 
 
         [Required]
-        public string Rol { get; set; }
+        public string Role { get; set; } 
 
-        public DateTime KayitTarihi { get; set; } = DateTime.Now;
+        public DateTime RegistrationDate { get; set; } = DateTime.Now;
     }
 }

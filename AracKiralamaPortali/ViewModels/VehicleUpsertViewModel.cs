@@ -1,41 +1,41 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AracKiralamaPortali.ViewModels
+namespace CarRentalPortal.ViewModels
 {
-    public class VehicleUpsertViewModel 
+    public class VehicleUpsertViewModel
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
 
-        [Required(ErrorMessage = "Lütfen araç markasını giriniz.")]
-        [StringLength(50, ErrorMessage = "Marka 50 karakterden uzun olamaz!")] 
-        [Display(Name = "Marka")]
-        public string Marka { get; set; }
+        [Required(ErrorMessage = "Please enter the vehicle make.")]
+        [StringLength(50, ErrorMessage = "Make cannot be longer than 50 characters!")]
+        [Display(Name = "Make")]
+        public string Make { get; set; } 
 
-        [Required(ErrorMessage = "Lütfen araç modelini giriniz.")]
-        [StringLength(50, ErrorMessage = "Model 50 karakterden uzun olamaz!")]
+        [Required(ErrorMessage = "Please enter the vehicle model.")]
+        [StringLength(50, ErrorMessage = "Model cannot be longer than 50 characters!")]
         [Display(Name = "Model")]
         public string Model { get; set; }
 
-        [Required(ErrorMessage = "Lütfen Model Yılını giriniz.")]
-        [Range(1990, 2100, ErrorMessage = "Model yılı 1990 ile 2100 arasında olmalıdır!")] 
-        [Display(Name = "Model Yılı")]
-        public int ModelYili { get; set; }
+        [Required(ErrorMessage = "Please enter the model year.")]
+        [Range(1990, 2100, ErrorMessage = "Model year must be between 1990 and 2100!")]
+        [Display(Name = "Model Year")]
+        public int ModelYear { get; set; } 
 
-        [Required(ErrorMessage = "Lütfen plaka bilgisini giriniz.")]
-        [StringLength(15, ErrorMessage = "Plaka 15 karakterden uzun olamaz!")]
-        [Display(Name = "Plaka")]
-        public string Plaka { get; set; }
+        [Required(ErrorMessage = "Please enter the license plate information.")]
+        [StringLength(15, ErrorMessage = "License plate cannot be longer than 15 characters!")]
+        [Display(Name = "License Plate")]
+        public string LicensePlate { get; set; } 
 
-        [Required(ErrorMessage = "Lütfen günlük kira ücretini giriniz.")]
-        [Range(1.0, 100000.0, ErrorMessage = "Ücret 1 TL ile 100000 TL arasında olmalıdır!")]
-        [Display(Name = "Günlük Kira Ücreti (TL)")]
-        public decimal GunlukKiraUcreti { get; set; }
+        [Required(ErrorMessage = "Please enter the daily rental rate.")]
+        [Range(1.0, 100000.0, ErrorMessage = "Rate must be between 1 TL and 100000 TL!")]
+        [Display(Name = "Daily Rate (TL)")]
+        public decimal DailyRate { get; set; } 
 
-        [Display(Name = "Açıklama (Opsiyonel)")]
-        [DataType(DataType.MultilineText)] 
-        public string Aciklama { get; set; } 
+        [Display(Name = "Description (Optional)")]
+        [DataType(DataType.MultilineText)]
+        public string Description { get; set; } 
 
-        [Display(Name = "Şu Anda Kirada Mı?")]
-        public bool KiradaMi { get; set; } = false; 
+        [Display(Name = "Currently Rented?")]
+        public bool IsRented { get; set; } = false; 
     }
 }

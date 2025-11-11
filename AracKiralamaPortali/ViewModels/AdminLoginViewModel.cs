@@ -1,20 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AracKiralamaPortali.ViewModels
+namespace CarRentalPortal.ViewModels
 {
     public class AdminLoginViewModel
     {
-        [Required(ErrorMessage = "E-posta alanı boş bırakılamaz.")]
-        [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi giriniz.")]
-        [Display(Name = "E-posta Adresi")]
+        [Required(ErrorMessage = "Email address is required.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address.")]
+        [Display(Name = "Email Address")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Şifre alanı boş bırakılamaz.")]
-        [DataType(DataType.Password)] 
-        [Display(Name = "Şifre")]
-        public string Şifre { get; set; }
+        [Required(ErrorMessage = "Password is required.")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password { get; set; } 
 
-        [Display(Name = "Beni Hatırla")]
-        public bool BeniHatirla { get; set; }
+
+        [Display(Name = "Remember Me")]
+        public bool RememberMe { get; set; } 
     }
 }

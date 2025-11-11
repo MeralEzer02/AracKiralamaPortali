@@ -1,10 +1,11 @@
-﻿using AracKiralamaPortali.Data; 
-using AracKiralamaPortali.Repositories; 
+﻿using CarRentalPortal.Repositories;
+using CarRentalPortal.Data;
+using CarRentalPortal.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AracKiralamaPortali.Repositories
+namespace CarRentalPortal.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
@@ -15,38 +16,38 @@ namespace AracKiralamaPortali.Repositories
             _context = context;
         }
 
-        // EKLEME İŞLEMİ :
+        // CREATE :
         public async Task AddAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
-
+            // Saves changes to the database.
             await _context.SaveChangesAsync();
         }
 
-        // SİLME İŞLEMİ :
+        // DELETE :
         public async Task DeleteAsync(T entity)
         {
-            _context.Set<T>().Remove(entity); 
-            await _context.SaveChangesAsync(); 
+            _context.Set<T>().Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
-        // TÜMÜNÜ GETİRME İŞLEMİ :
+        // READ ALL :
         public async Task<IReadOnlyList<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
         }
 
-        // ID İLE TEK KAYIT GETİRME İŞLEMİ :
+        // READ BY ID :
         public async Task<T> GetByIdAsync(int id)
         {
             return await _context.Set<T>().FindAsync(id);
         }
 
-        // GÜNCELLEME İŞLEMİ :
+        // UPDATE :
         public async Task UpdateAsync(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync(); 
+            await _context.SaveChangesAsync();
         }
     }
 }
