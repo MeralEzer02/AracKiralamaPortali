@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AracKiralamaPortali.Migrations
 {
-    [DbContext(typeof(AracKiralamaDbContext))]
+    [DbContext(typeof(CarRentalDbContext))]
     partial class AracKiralamaDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

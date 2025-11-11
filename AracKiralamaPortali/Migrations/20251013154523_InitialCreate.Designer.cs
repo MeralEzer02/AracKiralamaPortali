@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AracKiralamaPortali.Migrations
 {
-    [DbContext(typeof(AracKiralamaDbContext))]
+    [DbContext(typeof(CarRentalDbContext))]
     [Migration("20251013154523_InitialCreate")]
     partial class InitialCreate
     {

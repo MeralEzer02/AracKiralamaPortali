@@ -2,7 +2,7 @@
 
 namespace AracKiralamaPortali.Models
 {
-    public class Arac
+    public class Vehicle
     {
         public int Id { get; set; }
 

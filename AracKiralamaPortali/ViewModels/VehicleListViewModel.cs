@@ -2,7 +2,7 @@
 
 namespace AracKiralamaPortali.ViewModels 
 {
-    public class AracListViewModel
+    public class VehicleListViewModel
     {
         public int Id { get; set; } 
 

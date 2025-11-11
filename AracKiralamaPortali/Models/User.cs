@@ -2,7 +2,7 @@
 
 namespace AracKiralamaPortali.Models
 {
-    public class Kullanici
+    public class User
     {
         public int Id { get; set; }
 

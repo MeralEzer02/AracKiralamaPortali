@@ -8,9 +8,9 @@ namespace AracKiralamaPortali.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected readonly AracKiralamaDbContext _context;
+        protected readonly CarRentalDbContext _context;
 
-        public GenericRepository(AracKiralamaDbContext context)
+        public GenericRepository(CarRentalDbContext context)
         {
             _context = context;
         }

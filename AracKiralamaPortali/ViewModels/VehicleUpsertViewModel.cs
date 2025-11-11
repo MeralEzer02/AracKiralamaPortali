@@ -2,7 +2,7 @@
 
 namespace AracKiralamaPortali.ViewModels
 {
-    public class AracEkleGuncelleViewModel 
+    public class VehicleUpsertViewModel 
     {
         public int Id { get; set; } 
 
