@@ -8,7 +8,7 @@ namespace CarRentalPortal.Migrations
     /// <inheritdoc />
     public partial class InitialCreateEnglish : Migration
     {
-        /// <inheritdoc />
+        /// <inheritdoc />  
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
